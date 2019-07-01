@@ -38,7 +38,6 @@
         <flash-wrapper ref='flashes'></flash-wrapper>
 
         <div class="main-container-wrapper">
-
             {!! view_render_event('bagisto.shop.layout.header.before') !!}
 
             @include('shop::layouts.header.index')
@@ -47,7 +46,7 @@
 
             @yield('slider')
 
-            <div class="content-container">
+            <div class="content-container container">
 
                 {!! view_render_event('bagisto.shop.layout.content.before') !!}
 
@@ -56,7 +55,6 @@
                 {!! view_render_event('bagisto.shop.layout.content.after') !!}
 
             </div>
-
         </div>
 
         {!! view_render_event('bagisto.shop.layout.footer.before') !!}

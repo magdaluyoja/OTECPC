@@ -2,6 +2,12 @@
 @import "icons";
 @import "mixins";
 @import "animations";
+@import "../css/fontawesome-all.min";
+@import "../css/bootstrap.min";
+@import "../css/animate";
+@import "../css/owl.carousel.min";
+@import "../css/style";
+
 
 //override UA
 body {
@@ -310,13 +316,7 @@ input {
 
 //main store front layouting
 .main-container-wrapper {
-    max-width: 1300px;
-    width: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-
+    width: 100%;
     .content-container {
         display: block;
         margin-bottom: 40px;
@@ -683,13 +683,16 @@ section.slider-block {
 }
 
 //header navigation
+.header-top-container{
+    background-color: #f1aa09;
+}
 .header {
-    margin-top: 16px;
+    margin-top: 0px;
     margin-bottom: 21px;
     user-select: none;
 
     .header-top {
-        margin-bottom: 16px;
+        margin-bottom: 0px;
         display: flex;
         max-width: 100%;
         width: auto;
@@ -725,8 +728,8 @@ section.slider-block {
 
                     .search-field {
                         height: 38px;
-                        border: 2px solid $border-color;
-                        border-radius: 3px;
+                        border: 1px solid $border-color;
+                        border-radius: 0px;
                         border-right: none;
                         border-top-right-radius: 0px;
                         border-bottom-right-radius: 0px;
@@ -738,11 +741,13 @@ section.slider-block {
                         box-sizing: border-box;
                         height: 38px;
                         width: 38px;
-                        border: 2px solid $border-color;
+                        border: 1px solid $border-color;
                         border-top-right-radius: 3px;
                         border-bottom-right-radius: 3px;
 
                         button {
+                            height: 36px;
+                            width: 36px;
                             background: $btn-background-color;
                             border: 0;
                             padding: 3px 5px;
@@ -756,7 +761,7 @@ section.slider-block {
             .right-content-menu {
                 > li {
                     display: inline-block;
-                    border-right: 2px solid $border-color;
+                    border-right: 1px solid $border-color;
                     padding: 0 15px;
                     min-height: 15px;
                     padding-top: 3px;
@@ -1047,7 +1052,7 @@ section.slider-block {
         }
 
         .nav > li li:hover {
-            background-color: $background-color;
+            //background-color: $background-color;
         }
 
         .nav > li li:hover > ul {
@@ -1403,7 +1408,7 @@ section.slider-block {
                                     min-width: 20px;
                                     height: 20px;
                                     border: 1px solid #c7c7c7;
-                                    border-radius: 3px;
+                                    border-radius: 0px;
                                     float: right;
                                 }
                             }
@@ -1481,7 +1486,7 @@ section.slider-block {
             select {
                 background: $background-color;
                 border: 1px solid $border-color;
-                border-radius: 3px;
+                border-radius: 0px;
                 color: $font-color;
                 padding: 10px;
             }
@@ -1844,7 +1849,7 @@ section.product-detail {
                                     height: 38px;
                                     float: left;
                                     border: 1px solid $border-color;
-                                    border-radius: 3px;
+                                    border-radius: 0px;
                                     line-height: 36px;
                                     text-align: center;
                                     cursor: pointer;
@@ -1855,7 +1860,7 @@ section.product-detail {
                                     width: 38px;
                                     height: 38px;
                                     border: 1px solid $border-color;
-                                    border-radius: 3px;
+                                    border-radius: 0px;
                                     cursor: pointer;
                                     background: rgb(242, 242, 242);
                                 }
@@ -2148,7 +2153,7 @@ section.cart {
                     .control {
                         height: 38px;
                         width: 60px;
-                        border-radius: 3px;
+                        border-radius: 0px;
                         text-align: center;
                         line-height: 38px;
                     }
@@ -3435,7 +3440,7 @@ section.review {
 
                 ul.search-container li.search-group {
                     .search-field {
-                        border: 2px solid $border-color;
+                        border: 1px solid $border-color;
                         padding-right: 12px;
                         padding-left: 0px;
                         border-radius: 2px;
@@ -3444,7 +3449,7 @@ section.review {
                     }
 
                     .search-icon-wrapper {
-                        border: 2px solid $border-color;
+                        border: 1px solid $border-color;
                         border-right: none;
                         border-radius: 2px;
                         border-top-right-radius: 0px;
@@ -3456,7 +3461,7 @@ section.review {
             div.right-content {
                 .right-content-menu {
                     > li {
-                        border-right: 2px solid $border-color;
+                        border-right: 1px solid $border-color;
                         padding: 0 15px 0 15px;
 
                         &:last-child {
@@ -4044,4 +4049,81 @@ section.review {
             }
         }
     }
+}
+
+//Custom Styles
+@media(min-width: 768px){
+    .cart-dropdown-container.dropdown-open .dropdown-list,.dropdown-list.account.guest{
+        top:44px !important;
+        margin-top: 0px !important;
+    }
+}
+@media (min-width: 576px){
+    .container {
+        max-width: 540px !important;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+            max-width: 720px !important;
+    }
+}
+        
+@media (min-width: 992px){
+    .container {
+        max-width: 960px !important;
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .container {
+        max-width: 1240px !important;
+    }
+}
+@media (max-width: 720px){
+    .header-top-container{
+        height: 45px !important;
+    }
+}
+.container {
+    width: 100%;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header-top-container{
+    height: 58px;
+    padding-top: 9px;
+}
+.social.margin-fix.left{
+    margin-right: 20px;
+    a{
+        color:#ffffff !important;
+    }
+}
+.search-content,.header-bottom{
+    border: 1px solid #eeeeee !important;
+    background-color: #f7f7f7;
+    input{
+        background-color: #f7f7f7;
+    }
+}
+.header .header-bottom .nav ul {
+    background-color: #f7f7f7 !important;
+}
+.header .header-bottom .nav > li:hover,.header .header-bottom .nav > li>ul>li:hover{
+    background-color: #F2F2F2;
+}
+.header .header-bottom .nav > li > a:hover,.header .header-bottom .nav > li >ul>li> a:hover {
+    color: #f1aa09;
+}
+.header .header-bottom .nav > li >ul>li> a{
+    padding-left: 10px;
 }
