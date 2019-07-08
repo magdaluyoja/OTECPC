@@ -53,31 +53,35 @@ $(function() {
 
     function autoDropupDropdown() {
         dropdown = $(".dropdown-open");
-        if(!dropdown.find('.dropdown-list').hasClass('top-left') && !dropdown.find('.dropdown-list').hasClass('top-right') && dropdown.length) {
-            dropdown = dropdown.find('.dropdown-list');
-            height = dropdown.height() + 50;
-            var topOffset = dropdown.offset().top - 70;
-            var bottomOffset = $(window).height() - topOffset - dropdown.height();
+        if(dropdown.length){
+            if(!dropdown.find('.dropdown-list').hasClass('top-left') && !dropdown.find('.dropdown-list').hasClass('top-right') && dropdown.length) {
+                dropdown = dropdown.find('.dropdown-list');
+                if(dropdown.length){
+                    height = dropdown.height() + 50;
+                    var topOffset = dropdown.offset().top - 70;
+                    var bottomOffset = $(window).height() - topOffset - dropdown.height();
 
-            if(bottomOffset > topOffset || height < bottomOffset) {
-                dropdown.removeClass("bottom");
-                if(dropdown.hasClass('top-right')) {
-                    dropdown.removeClass('top-right')
-                    dropdown.addClass('bottom-right')
-                } else if(dropdown.hasClass('top-left')) {
-                    dropdown.removeClass('top-left')
-                    dropdown.addClass('bottom-left')
-                }
-            } else {
-                if(dropdown.hasClass('bottom-right')) {
-                    dropdown.removeClass('bottom-right')
-                    dropdown.addClass('top-right')
-                } else if(dropdown.hasClass('bottom-left')) {
-                    dropdown.removeClass('bottom-left')
-                    dropdown.addClass('top-left')
-                }
+                    if(bottomOffset > topOffset || height < bottomOffset) {
+                        dropdown.removeClass("bottom");
+                        if(dropdown.hasClass('top-right')) {
+                            dropdown.removeClass('top-right')
+                            dropdown.addClass('bottom-right')
+                        } else if(dropdown.hasClass('top-left')) {
+                            dropdown.removeClass('top-left')
+                            dropdown.addClass('bottom-left')
+                        }
+                    } else {
+                        if(dropdown.hasClass('bottom-right')) {
+                            dropdown.removeClass('bottom-right')
+                            dropdown.addClass('top-right')
+                        } else if(dropdown.hasClass('bottom-left')) {
+                            dropdown.removeClass('bottom-left')
+                            dropdown.addClass('top-left')
+                        }
+                    }
+                    }
             }
-        }
+            }
     }
 
     $('div').scroll(function() {

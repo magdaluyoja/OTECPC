@@ -31,6 +31,12 @@
 </head>
 
 <body @if (app()->getLocale() == 'ar') class="rtl" @endif style="scroll-behavior: smooth;">
+    <div id="preloader" style="display: none;">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 
     {!! view_render_event('bagisto.shop.layout.body.before') !!}
 
@@ -100,7 +106,10 @@
 
     <script type="text/javascript" src="{{ bagisto_asset('js/shop.js') }}"></script>
     <script type="text/javascript" src="{{ asset('vendor/webkul/ui/assets/js/ui.js') }}"></script>
-
+    <script src="{{ bagisto_asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ bagisto_asset('js/jquery.shuffle.min.js')}}"></script>
+    <script src="{{ bagisto_asset('js/gallery.js')}}"></script>
+    <script src="{{ bagisto_asset('js/owl.carousel.min.js')}}"></script>
     @stack('scripts')
 
     {!! view_render_event('bagisto.shop.layout.body.after') !!}

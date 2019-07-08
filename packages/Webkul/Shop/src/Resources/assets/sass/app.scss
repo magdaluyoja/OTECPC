@@ -2,11 +2,11 @@
 @import "icons";
 @import "mixins";
 @import "animations";
-@import "../css/fontawesome-all.min";
 @import "../css/bootstrap.min";
+@import "../css/style";
 @import "../css/animate";
 @import "../css/owl.carousel.min";
-@import "../css/style";
+@import "../css/fontawesome-all.min";
 
 
 //override UA
@@ -686,6 +686,9 @@ section.slider-block {
 .header-top-container{
     background-color: #f1aa09;
 }
+.header-bottom-container{
+    background-color: #ffffff;
+}
 .header {
     margin-top: 0px;
     margin-bottom: 21px;
@@ -954,7 +957,7 @@ section.slider-block {
     }
 
     .header-bottom {
-        height: 47px;
+        height: auto;
         margin-left: auto;
         margin-right: auto;
         border-top: 1px solid $border-color;
@@ -4052,6 +4055,8 @@ section.review {
 }
 
 //Custom Styles
+
+
 @media(min-width: 768px){
     .cart-dropdown-container.dropdown-open .dropdown-list,.dropdown-list.account.guest{
         top:44px !important;
@@ -4102,6 +4107,9 @@ section.review {
     height: 58px;
     padding-top: 9px;
 }
+.header-bottom-container{
+    height: auto;
+}
 .social.margin-fix.left{
     margin-right: 20px;
     a{
@@ -4126,4 +4134,31 @@ section.review {
 }
 .header .header-bottom .nav > li >ul>li> a{
     padding-left: 10px;
+}
+#header-bottom{
+    background: #ffffff;
+    border-color: #ffffff !important;
+}
+.header .header-bottom .nav > li:hover > ul{
+    left: 100%;
+    top: 0px;
+}
+.header .header-bottom .nav > li{
+    float: none;
+}
+.dropdown-menu{
+    .dropdown-right-icon{
+        position: absolute;
+        right: 10px;
+        top: 19px;
+    }
+}
+.header .header-bottom .nav ul{
+    color: #555555;
+    background-color: #f7f7f7;
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+    z-index: 99;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }

@@ -2278,7 +2278,7 @@ textarea:focus {
   margin-bottom: 0;
 }
 
-.checkbox label::before {
+/* .checkbox label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -2293,9 +2293,9 @@ textarea:focus {
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-}
+} */
 
-.checkbox label::after {
+/* .checkbox label::after {
   display: inline-block;
   position: absolute;
   width: 18px;
@@ -2308,16 +2308,16 @@ textarea:focus {
   padding-top: 2px;
   font-size: 10px;
   color: #c8c9c9;
-}
+} */
 
 .checkbox input[type="checkbox"] {
   opacity: 0;
 }
 
-.checkbox input[type="checkbox"]:checked + label::after {
+/* .checkbox input[type="checkbox"]:checked + label::after {
   font-family: 'Material Icons';
   content: "\E876";
-}
+} */
 
 .checkbox input[type="checkbox"]:disabled + label {
   opacity: 0.65;

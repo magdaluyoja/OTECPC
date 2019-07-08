@@ -41,7 +41,6 @@
                             <li class="currency-switcher">
                                 <span class="dropdown-toggle">
                                     {{ core()->getCurrentCurrencyCode() }}
-
                                     <i class="icon arrow-down-icon"></i>
                                 </span>
                                 <ul class="dropdown-list currency">
@@ -124,8 +123,62 @@
                 </div>
         </div>
     </div>
-    <div class="header-bottom container" id="header-bottom">
-        @include('shop::layouts.header.nav-menu.navmenu')
+    <div class="header-bottom-container">
+        <div class="header-bottom container" id="header-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white custom-menu split-menu">
+                <div class="container">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-1" aria-controls="navbar-toggle-1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+
+                    <a class="navbar-brand mobile-brand m-auto" href="javascript:;"><img src="{{ bagisto_asset('images/logo-icon.png') }}" alt=""></a>
+
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-2" aria-controls="navbar-toggle-2" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbar-toggle-1">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:;" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories <i class="icon arrow-down-icon"></i></a>
+                                <div class="dropdown-menu drop-to-right animated fadeIn fast" aria-labelledby="dropdown2">
+                                    @include('shop::layouts.header.nav-menu.navmenu')
+                                </div>
+                            </li>
+                            <li class="nav-item after-dropdown">
+                                <a class="nav-link" href="/blog">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a class="navbar-brand m-auto" href="javascript:;"><img src="{{ bagisto_asset('images/logo-icon.png') }}" alt=""></a>
+
+                    <div class="collapse navbar-collapse" id="navbar-toggle-2">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        </div>
     </div>
 
     <div class="search-responsive" id="search-responsive">
