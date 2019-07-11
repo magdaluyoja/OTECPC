@@ -2,7 +2,7 @@
     <div class="navbar-top-left">
         <div class="brand-logo">
             <a href="{{ route('admin.dashboard.index') }}">
-                <img src="{{ asset('vendor/webkul/ui/assets/images/logo.png') }}" alt="Bagisto"/>
+                <img src="{{ asset('vendor/webkul/ui/assets/images/logo.png') }}" alt="TO Persian Carpet" style="height: 45px;" />
             </a>
         </div>
     </div>

@@ -34,7 +34,7 @@
         border-right: none;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
-        border-radius: 3px;
+        border-radius: 0px;
         height: 36px;
         width: 280px;
         padding-left: 10px;
@@ -46,7 +46,7 @@
 
     .icon-wrapper {
         border: 2px solid $control-border-color;
-        border-radius: 3px;
+        border-radius: 0px;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         height: 36px;
@@ -67,7 +67,7 @@
     height: 36px;
     width: 200px;
     border: 2px solid $control-border-color;
-    border-radius: 3px;
+    border-radius: 0px;
     color: #8E8E8E;
     padding: 0px 5px 0px 5px;
 
