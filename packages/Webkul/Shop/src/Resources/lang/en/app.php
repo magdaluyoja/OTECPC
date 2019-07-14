@@ -132,7 +132,7 @@ return [
             'forgot_pass' => 'Forgot Password?',
             'button_title' => 'Sign In',
             'remember' => 'Remember Me',
-            'footer' => '© Copyright :year Webkul Software, All rights reserved',
+            'footer' => '© Copyright :year TO Persian Carpet Manila, All rights reserved',
             'invalid-creds' => 'Please Check Your Credentials And Try Again',
             'verify-first' => 'Verify Your Email Account First',
             'not-activated' => 'Your activation seeks admin approval',
@@ -518,7 +518,7 @@ return [
     ],
 
     'webkul' => [
-        'copy-right' => '© Copyright :year Webkul Software, All rights reserved',
+        'copy-right' => '© Copyright :year TO Persian Carpet Manila, All rights reserved',
     ],
 
     'response' => [

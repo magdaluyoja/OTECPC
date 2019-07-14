@@ -4137,6 +4137,8 @@ footer.dark.bg-primary a:hover, footer.dark.bg-primary-hover a:hover {
 
 /*--- widgets ---*/
 .widget {
+  background: #ffffff;
+  min-height: 286px;
   padding: 15px;
   border: 2px solid #eeeeee;
   margin-bottom: 20px;
@@ -4144,6 +4146,7 @@ footer.dark.bg-primary a:hover, footer.dark.bg-primary-hover a:hover {
 
 .footer-widgets {
   padding: 50px 0 30px 0;
+  background: #f2f2f2;
 }
 
 .footer-widgets .widget-title {
@@ -4154,7 +4157,7 @@ footer.dark.bg-primary a:hover, footer.dark.bg-primary-hover a:hover {
 
 .footer-logo {
   width: auto;
-  max-height: 55px;
+  max-height: 150px;
   margin-bottom: 27px;
   margin-top: 21px;
 }
@@ -5637,3 +5640,10 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 .main-container-wrapper {
   max-width: unset !important;
 } */
+.footer-list span.icon{
+  display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    height: 24px;
+    width: 24px;
+}

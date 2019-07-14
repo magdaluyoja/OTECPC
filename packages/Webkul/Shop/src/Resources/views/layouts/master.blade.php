@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>@yield('page_title') | TO Persian Carpet</title>
+    <title>@yield('page_title') | TO Persian Carpet Manila</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,7 +81,7 @@
 
     </div>
 
-    <script type="text/javascript">
+    <script>
         window.flashMessages = [];
 
         @if ($success = session('success'))
@@ -104,8 +104,8 @@
         @endif
     </script>
 
-    <script type="text/javascript" src="{{ bagisto_asset('js/shop.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/webkul/ui/assets/js/ui.js') }}"></script>
+    <script src="{{ bagisto_asset('js/shop.js') }}"></script>
+    <script src="{{ asset('vendor/webkul/ui/assets/js/ui.js') }}"></script>
     <script src="{{ bagisto_asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ bagisto_asset('js/jquery.shuffle.min.js')}}"></script>
     <script src="{{ bagisto_asset('js/gallery.js')}}"></script>

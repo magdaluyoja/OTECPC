@@ -4,10 +4,8 @@ window.VeeValidate = require("vee-validate");
 window.axios = require("axios");
 require("./bootstrap");
 require("ez-plus/src/jquery.ez-plus.js");
-//<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
 require("./tether.min.js");
 require("./preloader.js");
-// require("./jquery.shuffle.min.js");
 require("./gallery.js");
 require("./owl.carousel.min.js");
 
@@ -32,21 +30,21 @@ $(document).ready(function () {
             this.addServerErrors();
             this.addFlashMessages();
             $('.gallery-filter li a').on('click', function (e) {
-            e.preventDefault();
-            var $this = $(this),
-                isActive = $this.hasClass('active'),
-                group = isActive ? 'all' : $this.data('group');
+                e.preventDefault();
+                var $this = $(this),
+                    isActive = $this.hasClass('active'),
+                    group = isActive ? 'all' : $this.data('group');
 
-            // Hide current label, show current label in title
-            if (!isActive) {
-                $('.gallery-filter li a').removeClass('active');
-            }
+                // Hide current label, show current label in title
+                if (!isActive) {
+                    $('.gallery-filter li a').removeClass('active');
+                }
 
-            $this.toggleClass('active');
+                $this.toggleClass('active');
 
-            // Filter elements
-            $grid.shuffle('shuffle', group);
-        });
+                // Filter elements
+                $grid.shuffle('shuffle', group);
+            });
         },
 
         methods: {

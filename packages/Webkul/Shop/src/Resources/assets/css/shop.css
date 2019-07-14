@@ -1343,7 +1343,7 @@ section.slider-block div.slider-content div.slider-control .light-right-icon {
 }
 
 .header .header-bottom .nav li > .icon {
-  display: none;
+  display: block;
 }
 
 .header .header-bottom .nav {
