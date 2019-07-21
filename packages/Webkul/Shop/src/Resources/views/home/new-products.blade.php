@@ -1,21 +1,19 @@
 @if (app('Webkul\Product\Repositories\ProductRepository')->getNewProducts()->count())
-    <section class="featured-products">
+    <div class="featured-products card">
+        <div class="card-body">
+            <div class=" text-center">
+                <i class="md-icon dp36 text-danger">{{ __('shop::app.home.new-products') }}</i><br>
+                <span class="featured-seperator" style="color:#e41b1b ;">_____</span>
+            </div>
+            <div class="featured-grid product-grid-4 mt-3">
 
-        <div class="featured-heading">
-            {{ __('shop::app.home.new-products') }}<br/>
+                @foreach (app('Webkul\Product\Repositories\ProductRepository')->getNewProducts() as $productFlat)
 
-            <span class="featured-seperator" style="color:lightgrey;">_____</span>
-        </div>
+                    @include ('shop::products.list.card', ['product' => $productFlat])
 
-        <div class="product-grid-4">
+                @endforeach
 
-            @foreach (app('Webkul\Product\Repositories\ProductRepository')->getNewProducts() as $productFlat)
-
-                @include ('shop::products.list.card', ['product' => $productFlat])
-
-            @endforeach
-
-        </div>
-
-    </section>
+            </div>
+        </div><!-- / card-body -->
+    </div>
 @endif

@@ -4,7 +4,7 @@
 
         <ul class="slider-images">
             <li v-for="(image, index) in images" :key="index" v-bind:class="{'show': index==currentIndex}">
-                <img class="slider-item" :src="image" />
+                <img class="slider-item" :src="image" :alt="title"/>
                 <div class="show-content" v-bind:class="{'show': index==currentIndex}" :key="index" v-html="content[index]"></div>
             </li>
         </ul>
@@ -41,6 +41,7 @@ export default {
             content: [],
             current: false,
             images_loaded: false,
+            title: ""
 
         };
     },
@@ -62,6 +63,8 @@ export default {
                 this_this.images.push(this_this.public_path+'/storage/'+slider.path);
 
                 this_this.content.push(slider.content);
+
+                this_this.title = slider.title;
             });
             this.currentIndex = 0;
 
@@ -70,6 +73,9 @@ export default {
             } else {
                 this.images_loaded = true;
             }
+            var timer = setInterval(function(){
+                   this_this.changeIndexRight();
+                },5000);
         },
 
         changeIndexLeft: function() {

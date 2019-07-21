@@ -987,22 +987,6 @@ $(document).ready(function () {
         mounted: function mounted() {
             this.addServerErrors();
             this.addFlashMessages();
-            $('.gallery-filter li a').on('click', function (e) {
-                e.preventDefault();
-                var $this = $(this),
-                    isActive = $this.hasClass('active'),
-                    group = isActive ? 'all' : $this.data('group');
-
-                // Hide current label, show current label in title
-                if (!isActive) {
-                    $('.gallery-filter li a').removeClass('active');
-                }
-
-                $this.toggleClass('active');
-
-                // Filter elements
-                $grid.shuffle('shuffle', group);
-            });
         },
 
         methods: {
@@ -1104,153 +1088,6 @@ $(document).ready(function () {
             $(this).removeClass("hover");
         });
     }
-    $('#product-slider').owlCarousel({
-        loop: false,
-        margin: 10,
-        smartSpeed: 1000,
-        nav: true,
-        dots: true,
-        navText: ["<i class='fas fa-long-arrow-alt-left'></i>", "<i class='fas fa-long-arrow-alt-right'></i>"],
-        items: 1,
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut'
-    });
-
-    $('#product-slider-2').owlCarousel({
-        loop: false,
-        margin: 10,
-        smartSpeed: 1000,
-        nav: true,
-        dots: true,
-        navText: ["<i class='fas fa-long-arrow-alt-left'></i>", "<i class='fas fa-long-arrow-alt-right'></i>"],
-        items: 1,
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut'
-    });
-
-    $('#product-slider-3').owlCarousel({
-        loop: false,
-        margin: 10,
-        smartSpeed: 1000,
-        nav: true,
-        dots: true,
-        navText: ["<i class='fas fa-long-arrow-alt-left'></i>", "<i class='fas fa-long-arrow-alt-right'></i>"],
-        items: 1,
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut'
-    });
-
-    $('#clients-carousel').owlCarousel({
-        loop: true,
-        margin: 100,
-        dots: false,
-        autoplay: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
-    var $grid = "";
-    var shuffleme = function ($) {
-        'use strict';
-
-        $grid = $('#grid'); //locate what we want to sort 
-        var $filterOptions = $('.gallery-filter li'),
-            //locate the filter categories
-        $sizer = $grid.find('.shuffle_sizer'),
-            //sizer stores the size of the items
-
-        init = function init() {
-
-            // None of these need to be executed synchronously
-            setTimeout(function () {
-                listen();
-                setupFilters();
-            }, 100);
-
-            // instantiate the plugin
-            $grid.shuffle({
-                itemSelector: '[class*="col-"]',
-                sizer: $sizer
-            });
-        },
-
-
-        // Set up button clicks
-        setupFilters = function setupFilters() {
-            var $btns = $filterOptions.children();
-            $btns.on('click', function (e) {
-                e.preventDefault();
-                var $this = $(this),
-                    isActive = $this.hasClass('active'),
-                    group = isActive ? 'all' : $this.data('group');
-
-                // Hide current label, show current label in title
-                if (!isActive) {
-                    $('.gallery-filter li a').removeClass('active');
-                }
-
-                $this.toggleClass('active');
-
-                // Filter elements
-                $grid.shuffle('shuffle', group);
-            });
-
-            $btns = null;
-        },
-
-
-        // Re layout shuffle when images load. This is only needed
-        // below 768 pixels because the .picture-item height is auto and therefore
-        // the height of the picture-item is dependent on the image
-        // I recommend using imagesloaded to determine when an image is loaded
-        // but that doesn't support IE7
-        listen = function listen() {
-            var debouncedLayout = $.throttle(300, function () {
-                $grid.shuffle('update');
-            });
-
-            // Get all images inside shuffle
-            $grid.find('img').each(function () {
-                var proxyImage;
-
-                // Image already loaded
-                if (this.complete && this.naturalWidth !== undefined) {
-                    return;
-                }
-
-                // If none of the checks above matched, simulate loading on detached element.
-                proxyImage = new Image();
-                $(proxyImage).on('load', function () {
-                    $(this).off('load');
-                    debouncedLayout();
-                });
-
-                proxyImage.src = this.src;
-            });
-
-            // Because this method doesn't seem to be perfect.
-            setTimeout(function () {
-                debouncedLayout();
-            }, 500);
-        };
-
-        return {
-            init: init
-        };
-    }(jQuery);
-    shuffleme.init(); //filter gallery
-});
-
-$(document).ready(function () {
-    // shuffleme.init(); //filter gallery
 });
 
 /***/ }),
@@ -35729,7 +35566,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             currentIndex: -1,
             content: [],
             current: false,
-            images_loaded: false
+            images_loaded: false,
+            title: ""
 
         };
     },
@@ -35749,6 +35587,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this_this.images.push(this_this.public_path + '/storage/' + slider.path);
 
                 this_this.content.push(slider.content);
+
+                this_this.title = slider.title;
             });
             this.currentIndex = 0;
 
@@ -35757,6 +35597,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             } else {
                 this.images_loaded = true;
             }
+            var timer = setInterval(function () {
+                this_this.changeIndexRight();
+            }, 5000);
         },
 
 
@@ -35799,7 +35642,7 @@ var render = function() {
                 [
                   _c("img", {
                     staticClass: "slider-item",
-                    attrs: { src: image }
+                    attrs: { src: image, alt: _vm.title }
                   }),
                   _vm._v(" "),
                   _c("div", {

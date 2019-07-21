@@ -22,19 +22,32 @@
             @endif
 
             <div class="category-block" @if ($category->display_mode == 'description_only') style="width: 100%" @endif>
-                <div class="hero-image mb-35">
+                <div class="hero-image  mb-3">
                     @if (!is_null($category->image))
-                        <img class="logo" src="{{ $category->image_url }}" />
+                        <header class="contact-header parallax">
+                            <div class="header-content dark text-center">
+                                <h1 class="header-title mb-0">{{$category->name}}</h1>
+                                @if (in_array($category->display_mode, [null, 'description_only', 'products_and_description']))
+                                    @if ($category->description)
+                                        <div class="category-description">
+                                            <p class="inner-space mb-0">{!!$category->description!!}</p>
+                                        </div>
+                                    @endif
+                                @endif
+                                
+                            </div><!-- / header-content -->
+                        </header>
+                        @push('scripts')
+                            <script>
+                                $(document).ready(function(){
+                                    $(".contact-header.parallax").css("background-image","url('{{ $category->image_url }}')");
+                                });
+                            </script>
+                        @endpush
                     @endif
                 </div>
 
-                @if (in_array($category->display_mode, [null, 'description_only', 'products_and_description']))
-                    @if ($category->description)
-                        <div class="category-description">
-                            {!! $category->description !!}
-                        </div>
-                    @endif
-                @endif
+                
 
                 @if (in_array($category->display_mode, [null, 'products_only', 'products_and_description']))
                     <?php $products = $productRepository->getAll($category->id); ?>

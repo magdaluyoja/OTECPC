@@ -11,13 +11,13 @@
             {{ __('shop::app.products.new') }}
         </div>
     @endif
-
-    <div class="product-image">
-        <a href="{{ route('shop.products.index', $product->url_key) }}" title="{{ $product->name }}">
-            <img src="{{ $productBaseImage['medium_image_url'] }}" onerror="this.src='{{ asset('vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png') }}'"/>
-        </a>
+    <div class="product-image-container">
+        <div class="product-image">
+            <a href="{{ route('shop.products.index', $product->url_key) }}" title="{{ $product->name }}">
+                <img src="{{ $productBaseImage['medium_image_url'] }}" onerror="this.src='{{ asset('vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png') }}'"/>
+            </a>
+        </div>
     </div>
-
     <div class="product-information">
 
         <div class="product-name">

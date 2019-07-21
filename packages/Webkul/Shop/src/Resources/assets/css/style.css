@@ -4299,7 +4299,7 @@ header.account-header {
 }
 
 /* line effect */
-#gallery.line-effect .gallery {
+#gallery .line-effect .gallery {
   margin: 0 !important;
   padding: 0 !important;
 }
