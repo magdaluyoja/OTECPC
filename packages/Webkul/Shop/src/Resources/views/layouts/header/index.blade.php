@@ -1,3 +1,84 @@
+<div class="header-bottom-container">
+    <nav class="navbar navbar-expand-lg navbar-inverse bg-primary custom-menu menu-pills">
+        <div class="container full-width">
+            <a class="navbar-brand m-auto" href="javascript:;" style="padding-left: 15px;"><img src="{{ bagisto_asset('images/logo.png') }}" alt=""></a>
+            
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-toggle-3" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><!-- / navbar-toggler -->
+
+            <div class="collapse navbar-collapse" id="navbar-toggle-3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-0" href="/gallery">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-0" href="/about">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-0" href="/contact">CONTACT US</a>
+                    </li>
+                </ul><!-- / navbar-nav -->
+            </div><!-- / navbar-collapse -->
+        </div><!-- / container -->
+    </nav>
+
+    {{-- <nav class="navbar navbar-expand-lg navbar-inverse bg-primary dark custom-menu split-menu">
+        <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-1" aria-controls="navbar-toggle-1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <a class="navbar-brand mobile-brand m-auto" href="javascript:;"><img src="{{ bagisto_asset('images/logo.png') }}" alt=""></a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-2" aria-controls="navbar-toggle-2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-toggle-1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="/" style="padding-left: 0px;">Home</a>
+                    </li>
+                    <li class="nav-item after-dropdown">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="navbar-brand m-auto" href="javascript:;"><img src="{{ bagisto_asset('images/logo.png') }}" alt=""></a>
+
+            <div class="collapse navbar-collapse" id="navbar-toggle-2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about"  style="padding-right: 0px;">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> --}}
+</div>
 <div class="header" id="header">
     <div class="header-top-container">
         <div class="header-top container">
@@ -123,64 +204,16 @@
                 </div>
         </div>
     </div>
-    <div class="header-bottom-container">
-        <div class="header-bottom container" id="header-bottom">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white custom-menu split-menu">
-                <div class="container">
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-1" aria-controls="navbar-toggle-1" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar top-bar"></span>
-                        <span class="icon-bar middle-bar"></span>
-                        <span class="icon-bar bottom-bar"></span>
-                        <span class="sr-only">Toggle navigation</span>
-                    </button>
-
-                    <a class="navbar-brand mobile-brand m-auto" href="javascript:;"><img src="{{ bagisto_asset('images/logo.png') }}" alt=""></a>
-
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-2" aria-controls="navbar-toggle-2" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar top-bar"></span>
-                        <span class="icon-bar middle-bar"></span>
-                        <span class="icon-bar bottom-bar"></span>
-                        <span class="sr-only">Toggle navigation</span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbar-toggle-1">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:;" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories <i class="icon arrow-down-icon"></i></a>
-                                <div class="dropdown-menu drop-to-right animated fadeIn fast" aria-labelledby="dropdown2">
-                                    @include('shop::layouts.header.nav-menu.navmenu')
-                                </div>
-                            </li>
-                            <li class="nav-item after-dropdown">
-                                <a class="nav-link" href="/blog">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a class="navbar-brand m-auto" href="javascript:;"><img src="{{ bagisto_asset('images/logo.png') }}" alt=""></a>
-
-                    <div class="collapse navbar-collapse" id="navbar-toggle-2">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/gallery">Gallery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about">About Us</a>
-                            </li>
-                        </ul>
-                    </div>
+    <div class="row" style="background:#e8e8e8 ">
+        <div class="col-sm-12">
+            <div class="header-bottom-container">
+                <div class="header-bottom container" id="header-bottom">
+                    @include('shop::layouts.header.nav-menu.navmenu')
                 </div>
-            </nav>
-            
+            </div>
         </div>
     </div>
-
+   
     <div class="search-responsive" id="search-responsive">
         <form role="search" action="{{ route('shop.search.index') }}" method="GET" style="display: inherit;">
             <div class="search-content container">
@@ -192,7 +225,9 @@
             </div>
         </form>
     </div>
+
 </div>
+
 
 @push('scripts')
     <script>

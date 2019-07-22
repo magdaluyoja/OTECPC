@@ -5,16 +5,14 @@
                 <i class="md-icon dp36 text-danger">{{ __('shop::app.home.featured-products') }}</i><br>
                 <span class="featured-seperator" style="color:#e41b1b ;">_____</span>
             </div>
-            <div class="row">
-                <div class="col-sm-3 featured-grid product-grid-4 mt-3">
+            <div class="featured-grid product-grid-4 mt-3">
 
-                    @foreach (app('Webkul\Product\Repositories\ProductRepository')->getFeaturedProducts() as $productFlat)
+                @foreach (app('Webkul\Product\Repositories\ProductRepository')->getFeaturedProducts() as $productFlat)
 
-                        @include ('shop::products.list.card', ['product' => $productFlat])
+                    @include ('shop::products.list.card', ['product' => $productFlat])
 
-                    @endforeach
+                @endforeach
 
-                </div>
             </div>
         </div><!-- / card-body -->
     </div>

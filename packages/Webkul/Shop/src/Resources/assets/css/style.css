@@ -388,7 +388,7 @@ a.text-danger:focus, a.text-danger:hover {
 /*--- custom attributes ---*/
 .container.full-width {
   width: 100% !important;
-  padding: 0 !important;
+  /*padding: 0 !important;*/
 }
 
 .container-fluid.full-width {
@@ -2145,7 +2145,7 @@ input:focus, textarea:focus {
   outline: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border-color: #f1aa09 !important;
+  border-color: #c0bcbc  !important;
 }
 
 .form-inline.dark input:focus, .form-inline.dark textarea:focus {
@@ -2850,7 +2850,7 @@ label.btn-file {
 /*--- end of navs ---*/
 /*--- navbars ---*/
 .navbar {
-  padding: 1.5rem 1.25rem;
+  padding: 0;
   border-radius: 0;
   display: block !important;
 }
@@ -2913,7 +2913,7 @@ label.btn-file {
 }
 
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus {
-  color: #555555;
+  color: #fff;
 }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open > .nav-link {
@@ -2925,7 +2925,7 @@ label.btn-file {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #f1aa09;
+  color: #fff;
 }
 
 .navbar-toggler {
@@ -3169,6 +3169,7 @@ nav .btn-xs {
 
 .navbar-inverse.bg-primary .navbar-nav .nav-link:hover, .navbar-inverse.bg-primary .navbar-nav .active > .nav-link:hover, .navbar-inverse.bg-primary .navbar-nav .nav-link.active:hover, .navbar-inverse.bg-primary .navbar-nav .nav-link.open:hover, .navbar-inverse.bg-primary .navbar-nav .open > .nav-link:hover {
   color: white;
+  background: #c48904;
 }
 
 .navbar-inverse.bg-primary .navbar-nav .nav-link:focus, .navbar-inverse.bg-primary .navbar-nav .nav-link:hover {
@@ -5073,8 +5074,8 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 @media only screen and (max-width: 991px) {
   .navbar-expand-lg > .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   .navbar-expand-lg.menu-line.nav-scroll li a span {
