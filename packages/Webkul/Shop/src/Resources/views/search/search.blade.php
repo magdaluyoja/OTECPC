@@ -18,11 +18,11 @@
                 </div>
             @else
                 @if ($results->count() == 1)
-                    <div class="search-result-status mb-20">
+                    <div class="search-result-status mb-20 mt-20">
                         <span><b>{{ $results->count() }} </b>{{ __('shop::app.search.found-result') }}</span>
                     </div>
                 @else
-                    <div class="search-result-status mb-20">
+                    <div class="search-result-status mb-20 mt-20">
                         <span><b>{{ $results->count() }} </b>{{ __('shop::app.search.found-results') }}</span>
                     </div>
                 @endif

@@ -12041,7 +12041,7 @@ a.btn, a.btn-social {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25;
-  color: #c8c9c9;
+  color: #7c8282;
   background-color: white;
   background-image: none;
   background-clip: padding-box;
@@ -26305,6 +26305,7 @@ section.cart .cart-content .right-side {
   margin-top: 17px;
   border-top: 1px solid #6a6966;
   padding-top: 12px;
+  font-size: 1.5rem;
 }
 
 .order-summary .payable-amount label {
@@ -26483,11 +26484,11 @@ section.cart .cart-content .right-side {
 }
 
 .checkout-process .col-main ul.checkout-steps li.active {
-  color: #2650EF;
+  color: #f1aa09;
 }
 
 .checkout-process .col-main ul.checkout-steps li.active .decorator {
-  border: 1px solid #2650EF;
+  border: 1px solid #f1aa09;
 }
 
 .checkout-process .col-main .step-content {
@@ -28160,8 +28161,6 @@ section.review .review-layouter .ratings-reviews .right-side .rater .line-bar .l
 }
 
 .header .header-bottom .nav ul, .header .header-bottom .nav > li:hover, .header .header-bottom .nav > li > ul > li:hover {
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 0 9px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 0 9px 0 rgba(0, 0, 0, 0.16);
   border-radius: 0px;
   background-color: #ffffff !important;
 }
@@ -28192,6 +28191,10 @@ input:focus, textarea:focus {
 
 .main-container-wrapper .product-card .sticker.new {
   background: #92d742;
+}
+
+.form-control, .control-group .control {
+  color: #242424 !important;
 }
 
 @media (max-width: 720px) {

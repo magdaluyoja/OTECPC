@@ -2216,7 +2216,7 @@ section.cart {
         margin-top: 17px;
         border-top: 1px solid $border-color;
         padding-top: 12px;
-
+        font-size: 1.5rem;
         label {
             font-weight: bold;
 
@@ -4189,8 +4189,6 @@ section.review {
     position: absolute;
 }
 .header .header-bottom .nav ul, .header .header-bottom .nav > li:hover, .header .header-bottom .nav > li > ul > li:hover{
-    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 0 9px 0 rgba(0, 0, 0, 0.16);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 0 9px 0 rgba(0, 0, 0, 0.16);
     border-radius: 0px;
     background-color: #ffffff !important;
 }
@@ -4215,6 +4213,9 @@ input:focus, textarea:focus {
 }
 .main-container-wrapper .product-card .sticker.new {
     background: #92d742;
+}
+.form-control, .control-group .control{
+    color: #242424 !important;
 }
 @media (max-width: 720px){
     .header .header-bottom .nav li .left {
